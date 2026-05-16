@@ -11,12 +11,20 @@ from tensorflow.keras.models import load_model
 from sklearn.preprocessing import MinMaxScaler
 from tensorflow.keras.models import load_model
 from prometheus_fastapi_instrumentator import Instrumentator
-
+import os
 
 # Caminho para o modelo pré-treinado
-import os
 MODEL_PATH = os.getenv("MODEL_PATH", "modelo_lstm_wege3_dir")
-model = load_model(MODEL_PATH, compile=False)
+
+try:
+    model = load_model(MODEL_PATH, compile=False)
+    print(f" Modelo carregado com sucesso de {MODEL_PATH}")
+except Exception as e:
+    print(f" Erro ao carregar modelo: {e}")
+    raise
+
+scaler = MinMaxScaler(feature_range=(0, 1))
+
 
 
 
@@ -51,6 +59,7 @@ def predict(data: PriceData):
     
 import os
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8000))  
+    port = int(os.environ.get("PORT", 8000)) 
+    print(f" Iniciando API na porta {port}...")
     uvicorn.run(app, host="0.0.0.0", port=port)
 
