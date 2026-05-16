@@ -15,8 +15,9 @@ from prometheus_fastapi_instrumentator import Instrumentator
 
 # Caminho para o modelo pré-treinado
 import os
-MODEL_PATH = os.getenv("MODEL_PATH", "modelo_lstm_wege3.h5")
+MODEL_PATH = os.getenv("MODEL_PATH", "modelo_lstm_wege3_dir")
 model = load_model(MODEL_PATH, compile=False)
+
 
 
 
