@@ -33,9 +33,6 @@ Fase 4 - Deep Learning e IA/
 
 └── README.md                               # Documentação
 
-
-
-
 ## 🧑‍💻 Treinamento do Modelo (train_model.py)
 
 O script de treinamento segue essas etapas:
@@ -79,20 +76,43 @@ O script de treinamento segue essas etapas:
         . modelo_lstm_wege3.keras (formato Keras).
         . modelo_lstm_wege3_dir (formato TensorFlow SavedModel).
 
+# 🛠️ Instalação e Configuração
+
+## 1. Clone o repositório: 
+Bash:
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+
+## 2. Crie e ative o ambiente virtual
+Bash:
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate     # Windows
+
+## 3. Instale as dependências
+Bash:
+pip install -r requirements.txt
+
+
+# ▶️ Instruções para Execução
+
+## 1. Execute o servidor local
+Bash:
+uvicorn main:app --reload
+
+## 2. Acesse a interface Swagger gerada pelo FastAPI
+Abra no navegador:
+http://127.0.0.1:8000/docs
+
+## 3. Acesse para leitura e navegação detalhada
+Abra no navegador:
+http://127.0.0.1:8000/redoc
+
 
 Como executar:
-
-## 📦 Dependências
-Certifique-se de instalar as bibliotecas necessárias:
-
-No terminal:
-pip install yfinance pandas numpy matplotlib scikit-learn tensorflow
-
 Após instalar as bibliotecas necessárias:
 Execute no terminal:
 python train_model.py
-
-
 
 
 
