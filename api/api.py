@@ -14,7 +14,7 @@ import os
 import tensorflow as tf
 
 # Caminho para o modelo pré-treinado
-MODEL_PATH = os.getenv("MODEL_PATH", "models/modelo_lstm_wege3_dir")
+MODEL_PATH = os.getenv("MODEL_PATH", "models/modelo_lstm_wege3.h5")
 
 try:
     model = tf.keras.models.load_model(MODEL_PATH, compile=False)
