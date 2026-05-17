@@ -26,12 +26,6 @@ except Exception as e:
 
 scaler = MinMaxScaler(feature_range=(0, 1))
 
-
-
-
-
-scaler = MinMaxScaler(feature_range=(0, 1))
-
 app = FastAPI(title="API de Previsão de Preços da ação WEGE3.SA com LSTM")
 
 Instrumentator().instrument(app).expose(app)
