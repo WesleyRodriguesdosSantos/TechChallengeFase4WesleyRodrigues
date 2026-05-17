@@ -14,14 +14,17 @@ Fase 4 - Deep Learning e IA/
 │   └── train_model.py
 │   └── modelo_lstm_wege3.keras
 │   └── modelo_lstm_wege3_dir
+
 │
 ├── models/                                  # Modelo salvo
 │
 │   └── modelo_lstm_wege3.keras
 │   └── modelo_lstm_wege3_dir
+
 │
 ├── api/                                    # Código para deploy
 │   └── api.py
+
 │
 │
 ├── requirements.txt                        # Dependências
