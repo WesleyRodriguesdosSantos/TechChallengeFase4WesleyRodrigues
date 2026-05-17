@@ -12,7 +12,7 @@ Fase 4 - Deep Learning e IA/
 
 ├── training/                   # Scripts de treino
 
- └── train_model.py
+ ----└── train_model.py
 
  └── modelo_lstm_wege3.keras
 
