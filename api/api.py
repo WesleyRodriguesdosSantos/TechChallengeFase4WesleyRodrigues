@@ -9,7 +9,6 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from tensorflow.keras.models import load_model
 from sklearn.preprocessing import MinMaxScaler
-from tensorflow.keras.models import load_model
 from prometheus_fastapi_instrumentator import Instrumentator
 import os
 import tensorflow as tf
@@ -41,18 +40,16 @@ def create_sequence(data, seq_length=60):
 
 @app.post("/predict")
 def predict(data: PriceData):
-    df = pd.DataFrame(data.prices, columns=["Close"])
+    try:
+        if len(data.prices) < 60:
+            return {"error": "É necessário fornecer pelo menos 60 preços."}
+        seq = create_sequence(data.prices, seq_length=60)
+        prediction = model.predict(seq)
+        return {"predicted_price": float(prediction[0][0])}
+    except Exception as e:
+        return {"error": str(e)}
 
-    scaled = scaler.fit_transform(df)
-
-    seq = create_sequence(scaled)
-
-    prediction = model.predict(seq)
-    prediction_rescaled = scaler.inverse_transform(prediction)
-
-    return {"predicted_price": round(float(prediction_rescaled[0][0]), 2)}
     
-import os
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000)) 
     print(f" Iniciando API na porta {port}...")
