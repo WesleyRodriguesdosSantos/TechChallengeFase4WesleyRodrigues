@@ -44,7 +44,7 @@ def predict(data: PriceData):
         if len(data.prices) < 60:
             return {"error": "É necessário fornecer pelo menos 60 preços."}
         seq = create_sequence(data.prices, seq_length=60)
-        prediction = model.predict(seq)
+        prediction = model(seq)
         return {"predicted_price": float(prediction[0][0])}
     except Exception as e:
         return {"error": str(e)}
