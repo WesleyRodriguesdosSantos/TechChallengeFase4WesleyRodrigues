@@ -11,20 +11,28 @@ Fase 4 - Deep Learning e IA/
 
 
 ├── training/                   # Scripts de treino
+
 └── train_model.py
+
 └── modelo_lstm_wege3.keras
+
 └── modelo_lstm_wege3_dir
 
-
 ├── models/                     # Modelos salvos
-    └── modelo_lstm_wege3.keras
-    └── modelo_lstm_wege3_dir
+
+└── modelo_lstm_wege3.keras
+    
+└── modelo_lstm_wege3_dir
     
 ├── api/                        # Código da API
-    └── api.py
-    └── modelo_lstm_wege3_dir
-    └── prometheus.yml
-    └── requirements.txt
+
+└── api.py
+
+└── modelo_lstm_wege3_dir
+
+└── prometheus.yml
+
+└── requirements.txt
 
 ├── requirements.txt            # Dependências
 
