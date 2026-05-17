@@ -12,6 +12,7 @@ from sklearn.preprocessing import MinMaxScaler
 from tensorflow.keras.models import load_model
 from prometheus_fastapi_instrumentator import Instrumentator
 import os
+import tensorflow as tf
 
 # Caminho para o modelo pré-treinado
 MODEL_PATH = os.getenv("MODEL_PATH", "modelo_lstm_wege3_dir")
