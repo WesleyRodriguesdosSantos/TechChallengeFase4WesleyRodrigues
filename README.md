@@ -8,42 +8,25 @@ O fluxo inclui coleta de dados históricos, pré-processamento, treinamento do m
 
 ## 🚀 Estrutura do Projeto
 Fase 4 - Deep Learning e IA/
-
-
-├── training/                               # Scripts de treino
-
- └── train_model.py
-
+|
+├── training/                   # Scripts de treino
+│   └── train_model.py
 │   └── modelo_lstm_wege3.keras
-
-
 │   └── modelo_lstm_wege3_dir
-
 │
-
-├── models/                                  # Modelo salvo
-
-│
-
+├── models/                     # Modelos salvos
 │   └── modelo_lstm_wege3.keras
-
 │   └── modelo_lstm_wege3_dir
-
 │
-
-├── api/                                    # Código para deploy
-
+├── api/                        # Código da API
 │   └── api.py
-
+│   └── modelo_lstm_wege3_dir
+│   └── prometheus.yml
+│   └── requirements.txt
 │
+├── requirements.txt            # Dependências
+└── README.md                   # Documentação
 
-│
-
-├── requirements.txt                        # Dependências
-
-│
-
-└── README.md                               # Documentação
 
 ## 🧑‍💻 Treinamento do Modelo (train_model.py)
 
