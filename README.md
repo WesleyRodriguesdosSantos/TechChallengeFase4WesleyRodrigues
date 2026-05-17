@@ -9,10 +9,9 @@ O fluxo inclui coleta de dados históricos, pré-processamento, treinamento do m
 ## 🚀 Estrutura do Projeto
 Fase 4 - Deep Learning e IA/
 
-|
-├── training/                               # Scripts de treino
 
-│   └── train_model.py
+├── training/                               # Scripts de treino
+ └── train_model.py
 
 │   └── modelo_lstm_wege3.keras
 
