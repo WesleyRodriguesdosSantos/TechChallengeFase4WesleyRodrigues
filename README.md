@@ -10,7 +10,6 @@ O fluxo inclui coleta de dados históricos, pré-processamento, treinamento do m
 Fase 4 - Deep Learning e IA/
 
 |
-
 ├── training/                               # Scripts de treino
 
 │   └── train_model.py
