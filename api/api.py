@@ -17,7 +17,7 @@ import os
 MODEL_PATH = os.getenv("MODEL_PATH", "modelo_lstm_wege3_dir")
 
 try:
-    model = load_model(MODEL_PATH, compile=False)
+    model = tf.keras.models.load_model(MODEL_PATH, compile=False)
     print(f" Modelo carregado com sucesso de {MODEL_PATH}")
 except Exception as e:
     print(f" Erro ao carregar modelo: {e}")
